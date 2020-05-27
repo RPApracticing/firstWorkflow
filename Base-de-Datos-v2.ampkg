@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<PackageConstruct1100 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>{633c8b6b-36ca-4887-8c14-0d642f6d7b2d}</ID>
+  <ParentID />
+  <Name />
+  <Type>Package</Type>
+  <Path />
+  <Tasks>
+    <anyType xsi:type="TaskConstruct">
+      <ID>{ae5057e4-e0f5-4b9a-82ce-75f44ff33dd6}</ID>
+      <ParentID>{E893A7FD-2758-4315-9181-93F8728332E5}</ParentID>
+      <Name>email</Name>
+      <Type>Task</Type>
+      <Path />
+      <StartedOn>1900-01-01T00:00:00Z</StartedOn>
+      <EndedOn>1900-01-01T00:00:00Z</EndedOn>
+      <ResultCode>0</ResultCode>
+      <ResultText />
+      <VersionDate>2020-05-27T15:51:17.703Z</VersionDate>
+      <Version>3</Version>
+      <ModifiedOn>2020-05-27T15:51:17.703Z</ModifiedOn>
+      <CreatedOn>2020-05-27T15:51:17.703Z</CreatedOn>
+      <Notes />
+      <CreatedBy>{6AD627E8-373B-4104-81B7-9670A9D2F430}</CreatedBy>
+      <CompletionState>Production</CompletionState>
+      <ExclusionSchedules />
+      <Empty>false</Empty>
+      <Enabled>true</Enabled>
+      <Removed>false</Removed>
+      <LockedBy />
+      <AML>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;AutoMateTask&gt;
+  &lt;TaskInfo&gt;
+    &lt;Version TaskVersion="11.3.10.65" MinVersion="0.0.0.0" AMLVersion="3.0" /&gt;
+  &lt;/TaskInfo&gt;
+  &lt;TaskFunctions&gt;
+    &lt;TaskFunction Name="OnStepStart" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function that is starting the step" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number that is about to execute" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnStepEnd" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function that is ending the step" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number that is about to end" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnStepError" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function with the error" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number of the error" /&gt;
+        &lt;Parameter Name="ErrorText" Description="The text of the error" /&gt;
+        &lt;Parameter Name="ErrorCode" Description="The code of the error" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskFailure" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function causing the task failure" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number causing the task failure" /&gt;
+        &lt;Parameter Name="ErrorText" Description="The text of the error" /&gt;
+        &lt;Parameter Name="ErrorCode" Description="The code of the error" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskStart" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="Reason" Description="The reason the task is starting" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskEnd" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="Reason" Description="The reason the task is ending" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="Main" Access="private"&gt;
+      &lt;Steps&gt;
+&lt;AMEMAIL ACTIVITY="create_session" SESSION="EmailSession1" PROTOCOLTYPE="ews" EMAILADDRESS="franzfernandez97@outlook.es" AUTODISCOVERURL="YES" USERNAME="franzfernandez97@outlook.es" PASSWORD="AM5WK79NzBu1dSDP1WuJeeCzQzzvmVtiCsZ6HgZcwkrbHQ=aME" /&gt;
+&lt;AMEMAIL ACTIVITY="send" SESSION="EmailSession1" FROM="franzfernandez97@outlook.es" TO="franzfernandez97@outlook.es" SUBJECT="Workflow Ejecutado" BODY="mensaje informativo del workflow realizado completamente" /&gt;
+	&lt;/Steps&gt;
+    &lt;/TaskFunction&gt;
+  &lt;/TaskFunctions&gt;
+&lt;/AutoMateTask&gt;</AML>
+    </anyType>
+    <anyType xsi:type="TaskConstruct">
+      <ID>{9d764019-497b-412f-83b7-0df4abf5d705}</ID>
+      <ParentID>{E893A7FD-2758-4315-9181-93F8728332E5}</ParentID>
+      <Name>createTable &amp;Field</Name>
+      <Type>Task</Type>
+      <Path />
+      <StartedOn>1900-01-01T00:00:00Z</StartedOn>
+      <EndedOn>1900-01-01T00:00:00Z</EndedOn>
+      <ResultCode>0</ResultCode>
+      <ResultText />
+      <VersionDate>2020-05-27T15:51:17.85Z</VersionDate>
+      <Version>5</Version>
+      <ModifiedOn>2020-05-27T15:51:17.85Z</ModifiedOn>
+      <CreatedOn>2020-05-27T15:51:17.85Z</CreatedOn>
+      <Notes />
+      <CreatedBy>{6AD627E8-373B-4104-81B7-9670A9D2F430}</CreatedBy>
+      <CompletionState>Production</CompletionState>
+      <ExclusionSchedules />
+      <Empty>false</Empty>
+      <Enabled>true</Enabled>
+      <Removed>false</Removed>
+      <LockedBy />
+      <AML>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;AutoMateTask&gt;
+  &lt;TaskInfo&gt;
+    &lt;Version TaskVersion="11.3.10.65" MinVersion="0.0.0.0" AMLVersion="3.0" /&gt;
+  &lt;/TaskInfo&gt;
+  &lt;TaskVariables&gt;
+    &lt;TaskVariable Name="ds_table" Type="dataset" /&gt;
+    &lt;TaskVariable Name="var_fecha" /&gt;
+  &lt;/TaskVariables&gt;
+  &lt;TaskFunctions&gt;
+    &lt;TaskFunction Name="OnStepStart" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function that is starting the step" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number that is about to execute" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnStepEnd" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function that is ending the step" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number that is about to end" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnStepError" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function with the error" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number of the error" /&gt;
+        &lt;Parameter Name="ErrorText" Description="The text of the error" /&gt;
+        &lt;Parameter Name="ErrorCode" Description="The code of the error" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskFailure" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function causing the task failure" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number causing the task failure" /&gt;
+        &lt;Parameter Name="ErrorText" Description="The text of the error" /&gt;
+        &lt;Parameter Name="ErrorCode" Description="The code of the error" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskStart" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="Reason" Description="The reason the task is starting" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskEnd" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="Reason" Description="The reason the task is ending" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="Main" Access="private"&gt;
+      &lt;Steps&gt;
+&lt;AMIF ACTIVITY="file_exist" FILE="C:\Automate Docs\clientes\upload-.xlsx" /&gt;
+&lt;AMEXCEL ACTIVITY="get_cell" WORKBOOK="C:\Automate Docs\clientes\upload-.xlsx" ACTION="rangebyreference" RESULTDATASET="ds_table" STARTCELLREF="A1" LASTCELL="YES" FIRSTROWCOLUMN="YES" /&gt;
+&lt;AMTEXT ACTIVITY="format_datetime" RESULTVARIABLE="var_fecha" DATETIMEFORMAT="yyyy-MM-dd" /&gt;
+&lt;AMDATABASE ACTIVITY="sql_query" CONNECTION="0AM5tp2j65MAhxhxjuqC4CcJrrImTPQ0Fo1bs7tHAuoiUCFhmVnKl3QxTYMDTOOrIKqkRkXytsF8htv/G3AOnbCdKcNJRkjHod3c/25Rw0xKmxZaQETT2MX846YJsOhDp5MqaME" AM_ENABLED="NO"&gt;CREATE TABLE clientes (
+ ID INT AUTO_INCREMENT PRIMARY KEY,
+ Nombre VARCHAR (255) NOT NULL,
+ Apellido VARCHAR (255) NOT NULL,
+ Fecha_Compra DATE,
+ Producto VARCHAR(255),
+ Descuento INT DEFAULT 0);&lt;/AMDATABASE&gt;
+&lt;AMLOOP ACTIVITY="dataset" DATASET="ds_table" FROM="2" /&gt;
+&lt;AMDATABASE ACTIVITY="sql_query" CONNECTION="0AM5jXz18K0mP3VOIpUVcmheP5lKNjdNLC9+6vWslT5Gpz5aLUz+ZZStEzrs93R5El4+Tn0sfbx76w2qNEnMym7e3mmbrz0Gx1oo6eifyvAWcpxIYiRrAuSZFo1hy5Bt3z9BaME"&gt;INSERT INTO clientes (Nombre, Apellido, Fecha_Compra, Producto)
+VALUES
+ ('%ds_table.nombre%', '%ds_table.apellido%', '%var_fecha%', '%ds_table.producto%');&lt;/AMDATABASE&gt;
+&lt;AMFILESYSTEM ACTIVITY="write_file" FILE="C:\Automate Docs\clientes\upload.txt" AM_ENABLED="NO"&gt;INSERT INTO clientes (Nombre, Apellido, Fecha_Compra, Producto)
+VALUES
+ ('%ds_table.nombre%', '%ds_table.apellido%', '%var_fecha%', '%ds_table.producto%');
+&lt;/AMFILESYSTEM&gt;
+&lt;AMLOOP ACTIVITY="end" /&gt;
+&lt;AMELSE /&gt;
+&lt;AMSHOWDIALOG MESSAGE="el nombre de la tabla es incorrecto, cambiar para proseguir" /&gt;
+&lt;AMIF ACTIVITY="end" /&gt;
+	&lt;/Steps&gt;
+    &lt;/TaskFunction&gt;
+  &lt;/TaskFunctions&gt;
+&lt;/AutoMateTask&gt;</AML>
+    </anyType>
+    <anyType xsi:type="TaskConstruct">
+      <ID>{fdac18eb-bfa9-462e-92cb-5fab8629fce9}</ID>
+      <ParentID>{E893A7FD-2758-4315-9181-93F8728332E5}</ParentID>
+      <Name>Extract Data</Name>
+      <Type>Task</Type>
+      <Path />
+      <StartedOn>1900-01-01T00:00:00Z</StartedOn>
+      <EndedOn>1900-01-01T00:00:00Z</EndedOn>
+      <ResultCode>0</ResultCode>
+      <ResultText />
+      <VersionDate>2020-05-27T15:51:17.883Z</VersionDate>
+      <Version>4</Version>
+      <ModifiedOn>2020-05-27T15:51:17.883Z</ModifiedOn>
+      <CreatedOn>2020-05-27T15:51:17.883Z</CreatedOn>
+      <Notes />
+      <CreatedBy>{6AD627E8-373B-4104-81B7-9670A9D2F430}</CreatedBy>
+      <CompletionState>Production</CompletionState>
+      <ExclusionSchedules />
+      <Empty>false</Empty>
+      <Enabled>true</Enabled>
+      <Removed>false</Removed>
+      <LockedBy />
+      <AML>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;AutoMateTask&gt;
+  &lt;TaskInfo&gt;
+    &lt;Version TaskVersion="11.3.10.65" MinVersion="0.0.0.0" AMLVersion="3.0" /&gt;
+  &lt;/TaskInfo&gt;
+  &lt;TaskVariables&gt;
+    &lt;TaskVariable Name="var_descuento" Default="1000" /&gt;
+  &lt;/TaskVariables&gt;
+  &lt;TaskFunctions&gt;
+    &lt;TaskFunction Name="OnStepStart" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function that is starting the step" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number that is about to execute" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnStepEnd" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function that is ending the step" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number that is about to end" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnStepError" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function with the error" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number of the error" /&gt;
+        &lt;Parameter Name="ErrorText" Description="The text of the error" /&gt;
+        &lt;Parameter Name="ErrorCode" Description="The code of the error" /&gt;
+      &lt;/Parameters&gt;
+      &lt;Steps&gt;
+&lt;AMFILESYSTEM ACTIVITY="write_file" FILE="C:\Automate Docs\Error.First.Workflow.txt"&gt;%%AMError.FunctionName%%AMError.StepNumber%
+%AMError.ErrorNumber%%AMError.ErrorDesc%
+&lt;/AMFILESYSTEM&gt;
+	&lt;/Steps&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskFailure" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="FunctionName" Description="The function causing the task failure" /&gt;
+        &lt;Parameter Name="StepNumber" Description="The step number causing the task failure" /&gt;
+        &lt;Parameter Name="ErrorText" Description="The text of the error" /&gt;
+        &lt;Parameter Name="ErrorCode" Description="The code of the error" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskStart" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="Reason" Description="The reason the task is starting" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="OnTaskEnd" Access="private"&gt;
+      &lt;Parameters&gt;
+        &lt;Parameter Name="Reason" Description="The reason the task is ending" /&gt;
+      &lt;/Parameters&gt;
+    &lt;/TaskFunction&gt;
+    &lt;TaskFunction Name="Main" Access="private"&gt;
+      &lt;Steps&gt;
+&lt;AMDATABASE ACTIVITY="sql_query" CONNECTION="0AM5asBCXw/QVH18HW5cRlBqQVa81cwkH/rZNlGV765+dO0mQab0VmqOSDma4AIq/8yYGn8oQZoGY/BzIKYZKpyxlesrxoQY5T7L9MQes/jRneJpjGApk/6I/4mCcwqXwavxaME" RESULTDATASET="ds_analized" SQLQUERY="select * from clientes;" /&gt;
+&lt;AMLOOP ACTIVITY="dataset" DATASET="ds_analized" FROM="2" /&gt;
+&lt;AMVARIABLE ACTIVITY="set" VARIABLENAME="var_descuento"&gt;&lt;![CDATA[%ds_analized.Descuento%+%var_descuento%]]&gt;&lt;/AMVARIABLE&gt;
+&lt;AMDATABASE ACTIVITY="sql_query" CONNECTION="0AM59YZUQ2qlHWt6+U/JnAWe2JH1HSbeAzI/f+5vVtDeUXQ8Sk+UencBmWyLCTuO8zk9bLBMJUyFinuKcLOPeI/J3KpBqH07mvJQCW5sPFuwcqZF177+H/qsl/l4Qydv4uxnaME"&gt;UPDATE clientes SET Descuento = %var_descuento% WHERE Descuento = %ds_analized.Descuento%;
+&lt;/AMDATABASE&gt;
+&lt;AMLOOP ACTIVITY="end" /&gt;
+	&lt;/Steps&gt;
+    &lt;/TaskFunction&gt;
+  &lt;/TaskFunctions&gt;
+&lt;/AutoMateTask&gt;</AML>
+    </anyType>
+  </Tasks>
+  <TaskProperties>
+    <anyType xsi:type="TaskPropertiesConstruct">
+      <ID>e6cd5ebf-48e0-46c6-b188-09da7f2a1245</ID>
+      <ParentID>{fdac18eb-bfa9-462e-92cb-5fab8629fce9}</ParentID>
+      <Name />
+      <Type>TaskProperties</Type>
+      <Path />
+      <StartedOn>1900-01-01T00:00:00Z</StartedOn>
+      <EndedOn>1900-01-01T00:00:00Z</EndedOn>
+      <ResultCode>0</ResultCode>
+      <ResultText />
+      <VersionDate>2020-05-27T15:51:17.947Z</VersionDate>
+      <Version>0</Version>
+      <ModifiedOn>2020-05-27T15:51:17.947Z</ModifiedOn>
+      <CreatedOn>2020-05-27T15:51:17.947Z</CreatedOn>
+      <Notes />
+      <CreatedBy>{6AD627E8-373B-4104-81B7-9670A9D2F430}</CreatedBy>
+      <CompletionState>InDevelopment</CompletionState>
+      <ExclusionSchedules />
+      <Empty>false</Empty>
+      <Enabled>true</Enabled>
+      <Removed>false</Removed>
+      <LockedBy />
+      <OnLogoff>DoNotRun</OnLogoff>
+      <OnLogged>LoggedonUser</OnLogged>
+      <OnLocked>LoggedonUser</OnLocked>
+      <UseLogonDefault>true</UseLogonDefault>
+      <LogonUsername>!#!ENCRYPTED!#!xnyvrX46w/wHjcnS/XcGmw==</LogonUsername>
+      <LogonPassword>!#!ENCRYPTED!#!Kb4pVMb7KlSR8Q1QqsQalw==</LogonPassword>
+      <LogonDomain />
+      <LogonPropertiesSpecified>false</LogonPropertiesSpecified>
+      <LogonPropertiesInheritancePath />
+      <ConcurrencyType>AlwaysRun</ConcurrencyType>
+      <PriorityAction>Queue</PriorityAction>
+      <PriorityWaitTimeOut>0</PriorityWaitTimeOut>
+      <TaskFailureAction>Fail</TaskFailureAction>
+      <CanStopTask>false</CanStopTask>
+      <TaskExecutionSpeed>0</TaskExecutionSpeed>
+      <PriorityPropertiesSpecified>false</PriorityPropertiesSpecified>
+      <PriorityPropertiesInheritancePath />
+      <ErrorNotifyEmailToAddress>franzfernandez97@outlook.es</ErrorNotifyEmailToAddress>
+      <ErrorNotifyEmailFromAddress>franzfernandez97@outlook.es</ErrorNotifyEmailFromAddress>
+      <ErrorRunTaskName />
+      <ErrorNotificationPropertiesSpecified>true</ErrorNotificationPropertiesSpecified>
+      <ErrorNotificationPropertiesInheritancePath />
+      <Constants />
+      <RunAsElevated>false</RunAsElevated>
+      <ExecutionPropertiesSpecified>false</ExecutionPropertiesSpecified>
+      <ExecutionPropertiesInheritancePath />
+      <IsolationOverride>Default</IsolationOverride>
+      <IsolationPropertiesSpecified>false</IsolationPropertiesSpecified>
+      <IsolationPropertiesInheritancePath />
+      <MaxTaskInstances>-1</MaxTaskInstances>
+      <TaskTimeout>-1</TaskTimeout>
+    </anyType>
+  </TaskProperties>
+  <Triggers>
+    <anyType xsi:type="FileTriggerConstruct">
+      <ID>{1671e23f-d0d4-476f-9638-6acd92e6811e}</ID>
+      <ParentID>{5B00CA35-3EFB-41ea-95C0-D8B50B9BFA9F}</ParentID>
+      <Name>File System Condition (2)</Name>
+      <Type>Trigger</Type>
+      <Path />
+      <StartedOn>1900-01-01T00:00:00Z</StartedOn>
+      <EndedOn>1900-01-01T00:00:00Z</EndedOn>
+      <ResultCode>0</ResultCode>
+      <ResultText />
+      <VersionDate>2020-05-27T15:51:18.03Z</VersionDate>
+      <Version>0</Version>
+      <ModifiedOn>2020-05-27T15:51:18.03Z</ModifiedOn>
+      <CreatedOn>2020-05-27T15:51:18.03Z</CreatedOn>
+      <Notes />
+      <CreatedBy>{6AD627E8-373B-4104-81B7-9670A9D2F430}</CreatedBy>
+      <CompletionState>Production</CompletionState>
+      <ExclusionSchedules />
+      <Empty>false</Empty>
+      <Enabled>false</Enabled>
+      <Removed>false</Removed>
+      <LockedBy />
+      <AssociatedTaskID />
+      <InstanceID />
+      <TriggerType>File</TriggerType>
+      <TriggerAfter>1</TriggerAfter>
+      <Wait>true</Wait>
+      <IgnoreExistingCondition>false</IgnoreExistingCondition>
+      <Timeout>0</Timeout>
+      <TimeoutUnit>Seconds</TimeoutUnit>
+      <Description />
+      <UserMode>NoUser</UserMode>
+      <Domain />
+      <Password />
+      <UserName />
+      <Folder>C:\Automate Docs\clientes</Folder>
+      <SubFolders>false</SubFolders>
+      <WaitForAccess>false</WaitForAccess>
+      <IsIntegratedFileSystem>false</IsIntegratedFileSystem>
+      <PollingInterval>10</PollingInterval>
+      <FileAdded>true</FileAdded>
+      <FileRemoved>false</FileRemoved>
+      <FileModified>false</FileModified>
+      <FileCount>-1</FileCount>
+      <FileSize>-1</FileSize>
+      <FolderSize>-1</FolderSize>
+      <Include />
+      <Exclude />
+      <FileRenamed>false</FileRenamed>
+      <FolderAdded>false</FolderAdded>
+      <FolderRemoved>false</FolderRemoved>
+      <FolderRenamed>false</FolderRenamed>
+      <FolderModified>false</FolderModified>
+      <FolderCount>-1</FolderCount>
+    </anyType>
+  </Triggers>
+  <TriggerProperties />
+  <WorkFlows>
+    <anyType xsi:type="WorkFlowConstruct">
+      <ID>{35317a6a-e472-4389-af02-57fe39b33bfd}</ID>
+      <ParentID>{589D12C2-1282-4466-B7E3-FE547509AF31}</ParentID>
+      <Name>Base-de-Datos</Name>
+      <Type>WorkFlow</Type>
+      <Path />
+      <StartedOn>1900-01-01T00:00:00Z</StartedOn>
+      <EndedOn>1900-01-01T00:00:00Z</EndedOn>
+      <ResultCode>0</ResultCode>
+      <ResultText />
+      <VersionDate>2020-05-27T15:54:39.447Z</VersionDate>
+      <Version>4</Version>
+      <ModifiedOn>2020-05-27T15:54:39.443Z</ModifiedOn>
+      <CreatedOn>2020-05-27T15:51:18.263Z</CreatedOn>
+      <Notes />
+      <CreatedBy>{6AD627E8-373B-4104-81B7-9670A9D2F430}</CreatedBy>
+      <CompletionState>Production</CompletionState>
+      <ExclusionSchedules />
+      <Empty>false</Empty>
+      <Enabled>true</Enabled>
+      <Removed>false</Removed>
+      <LockedBy />
+      <Triggers>
+        <anyType xsi:type="WorkFlowTriggerConstruct">
+          <ID>{55d06bb9-66c9-482e-8f44-5e0f8fe13d43}</ID>
+          <ParentID />
+          <Name />
+          <Type>WorkflowItem</Type>
+          <Path />
+          <WorkflowID>{35317a6a-e472-4389-af02-57fe39b33bfd}</WorkflowID>
+          <ConstructID>{1671e23f-d0d4-476f-9638-6acd92e6811e}</ConstructID>
+          <AgentID>{CC3AD52F-C1DC-4d24-B6BE-32467159C86C}</AgentID>
+          <ConstructType>Trigger</ConstructType>
+          <Enabled>true</Enabled>
+          <UseLabel>false</UseLabel>
+          <Label />
+          <X>23</X>
+          <Y>28</Y>
+          <Width>12</Width>
+          <Height>12</Height>
+          <TriggerType>File</TriggerType>
+        </anyType>
+      </Triggers>
+      <Items>
+        <anyType xsi:type="WorkFlowItemConstruct">
+          <ID>{9d88e0f2-d7c2-40ae-b717-012c20515d4f}</ID>
+          <ParentID />
+          <Name />
+          <Type>WorkflowItem</Type>
+          <Path />
+          <WorkflowID>{35317a6a-e472-4389-af02-57fe39b33bfd}</WorkflowID>
+          <ConstructID>{ae5057e4-e0f5-4b9a-82ce-75f44ff33dd6}</ConstructID>
+          <AgentID>{CC3AD52F-C1DC-4d24-B6BE-32467159C86C}</AgentID>
+          <ConstructType>Task</ConstructType>
+          <Enabled>true</Enabled>
+          <UseLabel>false</UseLabel>
+          <Label>Enter label here</Label>
+          <X>123</X>
+          <Y>28</Y>
+          <Width>12</Width>
+          <Height>12</Height>
+        </anyType>
+        <anyType xsi:type="WorkFlowItemConstruct">
+          <ID>{e27f5cec-3b2a-494d-a04a-ecb7d7e3f0ce}</ID>
+          <ParentID />
+          <Name />
+          <Type>WorkflowItem</Type>
+          <Path />
+          <WorkflowID>{35317a6a-e472-4389-af02-57fe39b33bfd}</WorkflowID>
+          <ConstructID>{9d764019-497b-412f-83b7-0df4abf5d705}</ConstructID>
+          <AgentID>{CC3AD52F-C1DC-4d24-B6BE-32467159C86C}</AgentID>
+          <ConstructType>Task</ConstructType>
+          <Enabled>true</Enabled>
+          <UseLabel>false</UseLabel>
+          <Label>Enter label here</Label>
+          <X>63</X>
+          <Y>28</Y>
+          <Width>12</Width>
+          <Height>12</Height>
+        </anyType>
+        <anyType xsi:type="WorkFlowItemConstruct">
+          <ID>{feb54eb9-cc6d-45d7-8f2d-e374ef5f15f2}</ID>
+          <ParentID />
+          <Name />
+          <Type>WorkflowItem</Type>
+          <Path />
+          <WorkflowID>{35317a6a-e472-4389-af02-57fe39b33bfd}</WorkflowID>
+          <ConstructID>{fdac18eb-bfa9-462e-92cb-5fab8629fce9}</ConstructID>
+          <AgentID>{CC3AD52F-C1DC-4d24-B6BE-32467159C86C}</AgentID>
+          <ConstructType>Task</ConstructType>
+          <Enabled>true</Enabled>
+          <UseLabel>false</UseLabel>
+          <Label>Enter label here</Label>
+          <X>93</X>
+          <Y>28</Y>
+          <Width>12</Width>
+          <Height>12</Height>
+        </anyType>
+      </Items>
+      <Links>
+        <anyType xsi:type="WorkFlowLinkConstruct">
+          <ID>{2fd11c39-ae05-45bf-8ab3-620cdcf2e010}</ID>
+          <ParentID />
+          <Name />
+          <Type>WorkflowLink</Type>
+          <Path />
+          <WorkflowID>{35317a6a-e472-4389-af02-57fe39b33bfd}</WorkflowID>
+          <SourceID>{e27f5cec-3b2a-494d-a04a-ecb7d7e3f0ce}</SourceID>
+          <DestinationID>{feb54eb9-cc6d-45d7-8f2d-e374ef5f15f2}</DestinationID>
+          <SourcePoint>
+            <X>75</X>
+            <Y>34</Y>
+          </SourcePoint>
+          <DestinationPoint>
+            <X>93</X>
+            <Y>34</Y>
+          </DestinationPoint>
+          <LinkType>Success</LinkType>
+          <ResultType>Default</ResultType>
+          <Value />
+        </anyType>
+        <anyType xsi:type="WorkFlowLinkConstruct">
+          <ID>{7ae5fae7-2e04-4163-a25a-f4dd887aec16}</ID>
+          <ParentID />
+          <Name />
+          <Type>WorkflowLink</Type>
+          <Path />
+          <WorkflowID>{35317a6a-e472-4389-af02-57fe39b33bfd}</WorkflowID>
+          <SourceID>{55d06bb9-66c9-482e-8f44-5e0f8fe13d43}</SourceID>
+          <DestinationID>{e27f5cec-3b2a-494d-a04a-ecb7d7e3f0ce}</DestinationID>
+          <SourcePoint>
+            <X>35</X>
+            <Y>34</Y>
+          </SourcePoint>
+          <DestinationPoint>
+            <X>63</X>
+            <Y>34</Y>
+          </DestinationPoint>
+          <LinkType>Success</LinkType>
+          <ResultType>Default</ResultType>
+          <Value />
+        </anyType>
+        <anyType xsi:type="WorkFlowLinkConstruct">
+          <ID>{9a005c29-399e-4b18-8af8-b76384713641}</ID>
+          <ParentID />
+          <Name />
+          <Type>WorkflowLink</Type>
+          <Path />
+          <WorkflowID>{35317a6a-e472-4389-af02-57fe39b33bfd}</WorkflowID>
+          <SourceID>{feb54eb9-cc6d-45d7-8f2d-e374ef5f15f2}</SourceID>
+          <DestinationID>{9d88e0f2-d7c2-40ae-b717-012c20515d4f}</DestinationID>
+          <SourcePoint>
+            <X>105</X>
+            <Y>34</Y>
+          </SourcePoint>
+          <DestinationPoint>
+            <X>123</X>
+            <Y>34</Y>
+          </DestinationPoint>
+          <LinkType>Success</LinkType>
+          <ResultType>Default</ResultType>
+          <Value />
+        </anyType>
+      </Links>
+      <Variables />
+      <ZoomFactor>90</ZoomFactor>
+      <LinkType>Straight</LinkType>
+    </anyType>
+  </WorkFlows>
+  <WorkFlowProperties />
+  <Folders />
+  <ItemPermissions />
+  <Processes />
+  <WorkflowItemProperties />
+  <Exclusions />
+</PackageConstruct1100>
